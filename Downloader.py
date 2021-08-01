@@ -1,9 +1,9 @@
 import pytube
 from time import sleep
 
-playlist = pytube.Playlist('https://www.youtube.com/watch?v=bfw5f4cnRcc&list=PLFITtxHy9Gk4gsWyU7uCVHK2Xp6W4pW35')
+playlist = pytube.Playlist('https://www.youtube.com/playlist?list=PLFITtxHy9Gk4gsWyU7uCVHK2Xp6W4pW35')
 ind = 0
-start_ind = 0
+start_ind = 295
 for video in playlist.videos:
     ind += 1
     if ind >= start_ind:
