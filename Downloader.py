@@ -3,7 +3,7 @@ from time import sleep
 
 playlist = pytube.Playlist('https://www.youtube.com/playlist?list=PLFITtxHy9Gk4gsWyU7uCVHK2Xp6W4pW35')
 ind = 0
-start_ind = 311
+start_ind = 1
 for video in playlist.videos:
 	ind += 1
 	if ind >= start_ind:
