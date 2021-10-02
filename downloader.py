@@ -8,5 +8,5 @@ for video in playlist.videos:
 	ind += 1
 	if ind >= start_ind:
 		print('Downloading {} {} / {}'.format(video.title, ind, len(playlist.videos)))
-		video.streams.filter(file_extension='mp4').first().download('C:/Data/Python/Youtube-Downloader/Downloads/')
+		video.streams.filter(file_extension='mp4').first().download('C:/Data/Python/youtube-downloader/downloads/')
 		sleep(1)

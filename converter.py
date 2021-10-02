@@ -3,7 +3,7 @@ import subprocess
 
 from pydub import AudioSegment
 
-directory = 'C:/Data/Python/Youtube-Downloader/Downloads/'
+directory = 'C:/Data/Python/youtube-downloader/downloads/'
 target_dBFS = -20
 ind = 0
 for file in os.listdir(directory):
