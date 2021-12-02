@@ -1,12 +1,14 @@
-import pytube
 from time import sleep
 
-playlist = pytube.Playlist('https://www.youtube.com/playlist?list=PLFITtxHy9Gk4gsWyU7uCVHK2Xp6W4pW35')
-ind = 0
-start_ind = 1
-for video in playlist.videos:
-	ind += 1
-	if ind >= start_ind:
-		print('Downloading {} {} / {}'.format(video.title, ind, len(playlist.videos)))
-		video.streams.filter(file_extension='mp4').first().download('C:/Data/Python/youtube-downloader/downloads/')
-		sleep(1)
+import pytube
+
+def download(playlist, directory, start_ind=1, end_ind=None):
+	ind = 0
+	for video in playlist.videos:
+		ind += 1
+		if ind >= start_ind:
+			print('Downloading {} {} / {}'.format(video.title, ind, len(playlist.videos)))
+			video.streams.filter(file_extension='mp4').first().download(directory)
+			sleep(1)
+		if end_ind and ind >= end_ind:
+			break
